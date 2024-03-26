@@ -1,21 +1,24 @@
 package ru.maxima;
 
-import org.springframework.beans.BeansException;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
 
         ClassPathXmlApplicationContext context
-                = null;
-        try {
-            context = new ClassPathXmlApplicationContext(
-                    "applicationContext.xml"
-            );
-        } catch (BeansException e) {
-            throw new RuntimeException(e);
-        }
+                = new ClassPathXmlApplicationContext(
+                        "applicationContext.xml"
+        );
 
-        Person teacher = context.getBean("idOfBeanOfTeacher", Person.class);
+        Radio radio = context.getBean("idOfRadioMaximum", RadioMaximum.class);
+
+        RadioPlayer player = new RadioPlayer(radio);
+        player.playRadio();
+
+        radio = context.getBean("idOfRadioEnergy", RadioEnergy.class);
+
+        player = new RadioPlayer(radio);
+
+        player.playRadio();
     }
 }
