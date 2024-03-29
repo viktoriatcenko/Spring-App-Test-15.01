@@ -7,11 +7,21 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:player.properties"/>
+
     <bean id="idOfBeanOfTeacher"
-          class="ru.maxima.Person">
+          class="ru.maxima.Person"
+          init-method="onStart"
+          destroy-method="onFinish">
         <constructor-arg value="Vitaliy"/>
         <constructor-arg value="32"/>
     </bean>
+
+    <bean id="idOfRadioDinamit"
+          class="ru.maxima.RadioDynamit">
+        <constructor-arg value="Rammstein - Mutter"/>
+    </bean>
+
 
     <bean id="idOfRadioMaximum"
           class="ru.maxima.RadioMaximum">
@@ -23,5 +33,16 @@
         <constructor-arg value="Avicii - Levels"/>
     </bean>
 
+    <bean id="idOfRadioDacha"
+          class="ru.maxima.RadioDacha">
+        <property name="song" value="ABBA - Happy New Year"/>
+    </bean>
+
+    <bean id="idRadioPlayer"
+          class="ru.maxima.RadioPlayer" scope="prototype">
+        <property name="radio" ref="idOfRadioDacha"/>
+        <property name="frequencyAM" value="${frequencyAM}"/>
+        <property name="frequencyFM" value="${frequencyFM}"/>
+    </bean>
 
 </beans>

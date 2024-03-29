@@ -8,6 +8,16 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Person {
+
+    public void onStart() {
+        System.out.println("Start of creating bean of Person");
+    }
+
     private String name;
     private Integer age;
+
+    public void onFinish() {
+        System.out.println("Start of destroying bean of Person");
+    }
+
 }
