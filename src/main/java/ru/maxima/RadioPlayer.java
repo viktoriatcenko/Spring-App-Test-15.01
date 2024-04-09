@@ -3,7 +3,6 @@ package ru.maxima;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 interface Radio {
@@ -47,7 +46,6 @@ class RadioMaximum implements Radio {
     }
 }
 
-@Component
 class RadioEnergy implements Radio {
 
     @Override
@@ -60,19 +58,16 @@ class RadioEnergy implements Radio {
 @Component
 public class RadioPlayer {
     private Radio radio1;
-    private Radio radio2;
     private Double frequencyAM;
     private Double frequencyFM;
 
     @Autowired
-    public RadioPlayer(@Qualifier("radioEnergy") Radio radio1,
-                       @Qualifier("radioMaximum") Radio radio2) {
+    public void setRadio1(Radio radio1) {
         this.radio1 = radio1;
-        this.radio2 = radio2;
     }
+
 
     public void playRadio() {
         System.out.println(radio1.getCurrentSong());
-        System.out.println(radio2.getCurrentSong());
     }
 }
