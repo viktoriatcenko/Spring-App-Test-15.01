@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a7eaff7-b202-4ebd-bfba-a99b62787fc5" name="Changes" comment="create simple app">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/maxima/reflection/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/maxima/reflection/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/player.properties" afterDir="false" />
+    <list default="true" id="6a7eaff7-b202-4ebd-bfba-a99b62787fc5" name="Changes" comment="xml-configuration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/maxima/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maxima/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/maxima/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/maxima/Person.java" afterDir="false" />
@@ -27,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubDefaultAccount">
@@ -94,7 +96,7 @@
       <updated>1711471785292</updated>
       <workItem from="1711471788457" duration="5242000" />
       <workItem from="1711627996987" duration="11000" />
-      <workItem from="1711728061852" duration="5886000" />
+      <workItem from="1711728061852" duration="7567000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1711474133248</created>
@@ -110,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1711476408866</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="xml-configuration">
+      <created>1711734221419</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711734221419</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,20 +139,26 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="create simple app" />
-    <option name="LAST_COMMIT_MESSAGE" value="create simple app" />
+    <MESSAGE value="xml-configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml-configuration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/maxima/Main.java</url>
-          <line>25</line>
+          <line>37</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/maxima/Main.java</url>
-          <line>19</line>
+          <line>31</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/maxima/Main.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

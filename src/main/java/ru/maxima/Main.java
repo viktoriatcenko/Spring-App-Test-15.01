@@ -10,19 +10,31 @@ public class Main {
                         "applicationContext.xml"
         );
 
-        RadioPlayer radioPlayer1 = context.getBean("idRadioPlayer", RadioPlayer.class);
-        RadioPlayer radioPlayer2 = context.getBean("idRadioPlayer", RadioPlayer.class);
+        RadioPlayer radioPlayer = context.getBean("radioPlayer", RadioPlayer.class);
 
-        boolean isRadioPlayersEquals = radioPlayer1 == radioPlayer2;
-
-        System.out.println("AM frequency if this radio is  " + radioPlayer1.getFrequencyAM());
-        System.out.println("FM frequency if this radio is  " + radioPlayer1.getFrequencyFM());
-        radioPlayer1.playRadio();
+        radioPlayer.playRadio();
 
 
-        System.out.println(isRadioPlayersEquals);
 
-        context.close();
+
+
+
+
+
+
+//        RadioPlayer radioPlayer1 = context.getBean("idRadioPlayer", RadioPlayer.class);
+//        RadioPlayer radioPlayer2 = context.getBean("idRadioPlayer", RadioPlayer.class);
+//
+//        boolean isRadioPlayersEquals = radioPlayer1 == radioPlayer2;
+//
+//        System.out.println("AM frequency if this radio is  " + radioPlayer1.getFrequencyAM());
+//        System.out.println("FM frequency if this radio is  " + radioPlayer1.getFrequencyFM());
+//        radioPlayer1.playRadio();
+//
+//
+//        System.out.println(isRadioPlayersEquals);
+//
+//        context.close();
 
 //        Radio radio = context.getBean("idOfRadioMaximum", RadioMaximum.class);
 //
@@ -34,5 +46,9 @@ public class Main {
 //        player = new RadioPlayer(radio);
 //
 //        player.playRadio();
+
+//        Person person = context.getBean("person", Person.class);
+//
+//        System.out.println(person);
     }
 }
