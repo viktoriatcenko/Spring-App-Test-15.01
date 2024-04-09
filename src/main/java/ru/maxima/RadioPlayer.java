@@ -3,7 +3,11 @@ package ru.maxima;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 interface Radio {
     String getCurrentSong();
@@ -58,16 +62,33 @@ class RadioEnergy implements Radio {
 @Component
 public class RadioPlayer {
     private Radio radio1;
+
+    @Value("${frequencyAM}")
     private Double frequencyAM;
+
+    @Value("${frequencyFM}")
     private Double frequencyFM;
+
 
     @Autowired
     public void setRadio1(Radio radio1) {
         this.radio1 = radio1;
     }
+    @PostConstruct
+    public void onStart() {
+        System.out.println("Start of creating bean of Person");
+    }
+
+
+    @PreDestroy
+    public void onFinish() {
+        System.out.println("Start of destroying bean of Person");
+    }
 
 
     public void playRadio() {
         System.out.println(radio1.getCurrentSong());
+        System.out.println(this.frequencyAM);
+        System.out.println(this.frequencyFM);
     }
 }

@@ -1,18 +1,45 @@
 package ru.maxima;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import ru.maxima.config.SpringConfig;
+import ru.maxima.model.Cat;
+import ru.maxima.model.Dog;
 
 public class Main {
     public static void main(String[] args) {
 
-        ClassPathXmlApplicationContext context
-                = new ClassPathXmlApplicationContext(
-                        "applicationContext.xml"
-        );
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(SpringConfig.class);
 
         RadioPlayer radioPlayer = context.getBean("radioPlayer", RadioPlayer.class);
 
-        radioPlayer.playRadio();
+        Person person = context.getBean("idOfPerson", Person.class);
+
+        System.out.println(person.getCat().getBreed());
+
+        System.out.println(person.getDog().getHeight());
+
+
+//        Cat cat = context.getBean("idOfCat", Cat.class);
+//
+//        Dog dog = context.getBean("idOfDog", Dog.class);
+
+
+
+//        System.out.println(dog.getHeight());
+//
+//        System.out.println(dog.getWeight());
+//
+//        System.out.println(cat.getBreed());
+//
+//        System.out.println(cat.getAge());
+//
+//        System.out.println(person);
+//
+//        radioPlayer.playRadio();
+
+        context.close();
 
 
 
